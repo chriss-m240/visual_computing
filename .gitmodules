@@ -7,3 +7,7 @@
 [submodule "themes/terrassa"]
 	path = themes/terrassa
 	url = git@github.com:danielkvist/hugo-terrassa-theme.git
+[submodule "public"]
+	path = public
+	url = git@github.com:chriss-m240/chriss-m240.github.io.git
+	branch = master

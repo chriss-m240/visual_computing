@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Visual Computing Course - Group site</title>
+    <link>chriss-m240.github.io/</link>
+    <description>Recent content in Home on Visual Computing Course - Group site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Dec 2018 22:21:42 +0100</lastBuildDate>
+    
+	<atom:link href="chriss-m240.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Group Members</title>
+      <link>chriss-m240.github.io/sections/simple-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>chriss-m240.github.io/sections/simple-example/</guid>
+      <description>Cristian Alejandro Mantilla Duque Juan Jesus Pulido Sanchez Juan David Barragan </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>chriss-m240.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>chriss-m240.github.io/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis donec et odio pellentesque diam. Sapien nec sagittis aliquam malesuada bibendum. Velit dignissim sodales ut eu sem integer vitae justo. Vulputate sapien nec sagittis aliquam malesuada bibendum. Eu ultrices vitae auctor eu augue ut. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Mauris in aliquam sem fringilla. Sed faucibus turpis in eu mi bibendum.</description>
+    </item>
+    
+    <item>
+      <title>This is just an example of a post</title>
+      <link>chriss-m240.github.io/posts/post-example/</link>
+      <pubDate>Mon, 17 Dec 2018 22:21:42 +0100</pubDate>
+      
+      <guid>chriss-m240.github.io/posts/post-example/</guid>
+      <description>5 ways country song ringtones can make you rich. Why country music festivals will change your life. The unconventional guide to music notes. Why our world would end if music videos disappeared. 8 insane (but true) things about top country songs. How twitter can teach you about popular songs. 13 facts about latin music videos that&amp;rsquo;ll keep you up at night. Why do people think free dances are a good idea?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Visual Computing Course - Group site</title>
+    <link>chriss-m240.github.io/sections/</link>
+    <description>Recent content in Sections on Visual Computing Course - Group site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="chriss-m240.github.io/sections/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Group Members</title>
+      <link>chriss-m240.github.io/sections/simple-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>chriss-m240.github.io/sections/simple-example/</guid>
+      <description>Cristian Alejandro Mantilla Duque Juan Jesus Pulido Sanchez Juan David Barragan </description>
+    </item>
+    
+  </channel>
+</rss>
