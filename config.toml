@@ -1,4 +1,4 @@
-baseURL = "chriss-m240.github.io"
+baseURL = "/"
 languageCode = "en-us"
 title = "Visual Computing Course - Group site"
 theme = "terrassa"
