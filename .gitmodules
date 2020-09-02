@@ -1,0 +1,9 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = git@github.com:theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/kross-hugo"]
+	path = themes/kross-hugo
+	url = git@github.com:themefisher/kross-hugo.git
+[submodule "themes/terrassa"]
+	path = themes/terrassa
+	url = git@github.com:danielkvist/hugo-terrassa-theme.git

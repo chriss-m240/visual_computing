@@ -1,0 +1,4 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Visual Computing Course - Group site"
+theme = "terrassa"
