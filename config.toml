@@ -2,3 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Visual Computing Course - Group site"
 theme = "terrassa"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

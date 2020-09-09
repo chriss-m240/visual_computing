@@ -8,4 +8,4 @@ weight: 1
 ---
 
 # Visual Computing
-## The best group is this one, no question about it.
+## This is honest work, no question about it.
