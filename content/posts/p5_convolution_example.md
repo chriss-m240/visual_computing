@@ -21,17 +21,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ex non ipsum ru
         </script>     
     </div>
 </div>
-<div class="row">
-    <select name="efeects" id="efects">
-        <option value="blur">blur</option>
-        <option value="bottom sobel">bottom sobel</option>
-        <option value="emboss">emboss</option>
-        <option value="identity">identity</option><option value="emboss">emboss</option>
-        <option value="left sobel">left sobel</option>
-        <option value="outline">outline</option>
-        <option value="right sobel">right sobel</option>
-        <option value="sharpen">sharpen</option>
-        <option value="top sobel">top sobel</option>
-    </select>
-</div>
 </div>
