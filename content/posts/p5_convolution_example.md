@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ex non ipsum ru
         <img src="/images/rover.png" alt="Italian Trulli">
     </div>
     <div style="float: left; width: 50%;" id="myCanvas">
-        <script src="/js/convolution2.js" type="text/javascript">
+        <script src="/js/convolution3.js" type="text/javascript">
         </script>     
     </div>
 </div>
