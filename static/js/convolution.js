@@ -10,14 +10,13 @@ function preload() {
 
 function setup() {
   createCanvas(710, 400).center('horizontal');
-  
   noLoop();
 }
 
 
 function draw() {
   image(img, 0, 0);
-  
+
   edgeImg = createImage(img.width, img.height);
 
   edgeImg.loadPixels();
