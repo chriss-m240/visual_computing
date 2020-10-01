@@ -13,12 +13,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ex non ipsum ru
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" type="text/javascript"></script>
 
 <div class="row">
-    <div style="float: left; width: 50%;">
-        <img src="/images/rover.png" alt="Italian Trulli">
+    <div class="centered_div">
+        <img id="source_img" src="/images/rover.png" alt="Italian Trulli">
     </div>
-    <div style="float: left; width: 50%;" id="myCanvas">
-        <script src="/js/convolution3.js" type="text/javascript">
-        </script>     
+    <div class="centered_div" style="padding-top: 7px" id="myCanvas">
+        <script src="/js/convolution2.js" type="text/javascript"></script>     
     </div>
 </div>
+    <div id="test">
+        <select name="cars" id="cars"> </select>
+    </div>
 </div>
+
+
+<style>
+
+.row {
+    display: flex;
+}
+
+.centered_div {
+    margin:auto
+}
+
+#test {
+    text-align: center;
+}
+
+#source_img {
+    width:319px;
+    height: 359px; 
+}
+
+</style>
