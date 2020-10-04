@@ -1,37 +1,92 @@
-let convolutionShader;
-let img;
+let hard_convolution = function(p5) {
+  let convolutionShader;
+  let img;
 
-let kernel = {
-  "emboss" : 1.0,
-  "sharpen" : 2.0,
-  "blur" : 3.0,
-  "bottomSobel" : 4.0,
-  "leftSobel" : 5.0,
-  "topSobel" : 6.0,
-  "rightSobel" : 7.0,
-  "outline" : 8.0,
-}
+  let WEBGL_kernels = {
+    "emboss" : 1.0,
+    "sharpen" : 2.0,
+    "blur" : 3.0,
+    "bottom sobel" : 4.0,
+    "left sobel" : 5.0,
+    "top sobel" : 6.0,
+    "right sobel" : 7.0,
+    "outline" : 8.0,
+    "identity" : 9.0,
+    "none" : 9.0,
+  }
 
-function preload(){
-  convolutionShader = loadShader('convolution.vert', 'convolution.frag');
-}
+  let selectedWEBGLKernel = "none"
+  let WEBGLflag = false
 
-function setup() {
-  createCanvas(350, 400, WEBGL);
-  noStroke();
+  p5.preload = function(){
+    convolutionShader = p5.loadShader('/js/convolution.vert', '/js/convolution.frag');
+  }
 
-  img = loadImage("rover.png"); 
-}
+  p5.setup  = function() {
+    img = p5.loadImage("/images/rover.png"); 
 
-function draw() {  
-  shader(convolutionShader);
+    p5.createCanvas(319, 359, p5.WEBGL);
+    p5.noStroke();
 
-  convolutionShader.setUniform('tex0', img);
-  convolutionShader.setUniform('kernelType', kernel.sharpen);
+    selGL = p5.createSelect(p5.select("#webgl_kernels"));
+    selGL.option('none');
+    selGL.option('bottom sobel');
+    selGL.option('emboss');
+    selGL.option('blur');
+    selGL.option('identity');
+    selGL.option('left sobel');
+    selGL.option('outline');
+    selGL.option('right sobel');
+    selGL.option('sharpen');
+    selGL.option('top sobel');
+
+    selGL.selected("none");
+
+    selGL.changed(handleSelectChangeI);
+
+    function handleSelectChangeI() {
+      selectedWEBGLKernel = selGL.value();
+      WEBGLflag = true
+
+    }
+  }
+
+  p5.draw = function () {  
+    if  (selectedWEBGLKernel == undefined || selectedWEBGLKernel == "none") {
+      p5.shader(convolutionShader);
+
+      convolutionShader.setUniform('tex0', img);
+      convolutionShader.setUniform('kernelType', WEBGL_kernels["none"]);
+      
+      convolutionShader.setUniform('stepSize', [1.0/p5.width, 1.0/p5.height]);
   
-  convolutionShader.setUniform('stepSize', [1.0/width, 1.0/height]);
+      convolutionShader.setUniform('dist', 1.0);
+  
+      p5.rect(0,0, p5.width, p5.height);
 
-  convolutionShader.setUniform('dist', 1.0);
+    } else if (WEBGLflag) {
+      let tt0 = performance.now()
 
-  rect(0,0, width, height);
+      p5.shader(convolutionShader);
+
+      convolutionShader.setUniform('tex0', img);
+      convolutionShader.setUniform('kernelType', WEBGL_kernels[selectedWEBGLKernel]);
+      
+      convolutionShader.setUniform('stepSize', [1.0/p5.width, 1.0/p5.height]);
+  
+      convolutionShader.setUniform('dist', 1.0);
+  
+      p5.rect(0,0, p5.width, p5.height);
+      WEBGLflag = false
+
+      let tt1 = performance.now()
+
+      var paragraph = document.getElementById("WEBGL");
+      var text = document.createTextNode((tt1 - tt0).toFixed(5) + " milliseconds.");
+      paragraph.removeChild(paragraph.childNodes[0]);
+      paragraph.appendChild(text);
+    }
+  }
 }
+
+new p5(hard_convolution, "canvasI")

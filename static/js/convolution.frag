@@ -83,12 +83,17 @@ void main(){
        kernel[3] = -2.0; kernel[4] = 0.0; kernel[5] = 2.0;
        kernel[6] = -1.0; kernel[7] = 0.0; kernel[8] = 1.0;
     }
-  
     if (kernelType == 8.0) { // outline kernel
        kernel[0] = -1.0; kernel[1] = -1.0; kernel[2] = -1.0;
        kernel[3] = -1.0; kernel[4] = 8.0; kernel[5] = -1.0;
        kernel[6] = -1.0; kernel[7] = -1.0; kernel[8] = -1.0;
     }
+    if (kernelType == 9.0) { // identity kernel
+       kernel[0] = 0.0; kernel[1] = 0.0; kernel[2] = 0.0;
+       kernel[3] = 0.0; kernel[4] = 1.0; kernel[5] = 0.0;
+       kernel[6] = 0.0; kernel[7] = 0.0; kernel[8] = 0.0;
+    }
+  
   
 	offset[0] = vec2(-stepSize.x, -stepSize.y); // top left
 	offset[1] = vec2(0.0, -stepSize.y); // top middle
