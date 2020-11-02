@@ -1,13 +1,41 @@
 ---
-title: "P5 optical illusion example"
-description: "P5 may trick you with some illusions, here is an example"
+title: "Lab 2, Optical Illusions"
+description: "P5 may trick you with some illusions, here are some examples"
 images: []
 draft: false
 tags: ["P5", "JS" , "Hugo"]
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" type="text/javascript"></script>
+<!-- <script src="/js/main.js" type="text/javascript"></script> -->
 
-The following illusion is called **Café Wall**, it consists of simple elements as it is some black and white squares displayed inside parallel rows tricking our eyes to see not parallel rows as it actually is but evidencing a few slopped squares especially at the ends or sides of the rows. Here is part of the code used to make this visualization:
+<script src="/js/illusions/cafeWall.js" type="text/javascript"></script>
+<script src="/js/illusions/penroseTriangle.js" type="text/javascript"></script>
+<script src="/js/illusions/mullerLyer.js" type="text/javascript"></script>
+<script src="/js/illusions/movingCars.js" type="text/javascript"></script>
+<script src="/js/illusions/circleSize.js" type="text/javascript"></script>
+<script src="/js/illusions/ponzoLines.js" type="text/javascript"></script>
+<script src="/js/illusions/movingSquare.js" type="text/javascript"></script>
+<script src="/js/illusions/mobiusStrip.js" type="text/javascript"></script>
+
+| Illusion | Category | Reference | Type of interactivity(if applies) |  Base code URL(if applies) |
+| --- | --- | --- | --- | --- | 
+| Cafe wall | Geometric | https://en.wikipedia.org/wiki/Caf%C3%A9_wall_illusion | Mouse movement X axis | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/cafeWall.js| 
+| Mobius strip | Paradox | https://www.illusionsindex.org/i/ambiguous-ring | None | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/mobiusStrip.js | 
+| Penrose triangle | Paradox | https://en.wikipedia.org/wiki/Penrose_triangle | Mouse click, Mouse movement X, Y axis  | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/penroseTriangle.js | 
+| Muller lyer | Size distorsion | https://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion | None | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/mullerLyer.js | 
+| Ebbinghaus illusion | Size distorsion | https://en.wikipedia.org/wiki/Ebbinghaus_illusion | Mouse click | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/circleSize.js | 
+| Ponzo illusion | Size distorsion | https://en.wikipedia.org/wiki/Ponzo_illusion | Mouse movement Y axis | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/ponzoLines.js | 
+| Stepping feet | Motion perception | https://en.wikipedia.org/wiki/Stepping_feet_illusion | Mouse click | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/movingCars.js | 
+| Breathing square | Geometric, motion perception | https://michaelbach.de/ot/mot-breathingSquare/index.html,  | Mouse click | https://github.com/visual-comp/visual-comp.github.io/blob/master/js/illusions/movingSquare.js | 
+
+
+
+## **Geometric and paradox**
+
+### Cafe Wall
+
+First we have the following illusion is called **Café Wall**, it i classified as a geometric illusion and it consists of simple elements as it is some black and white squares displayed inside parallel rows tricking our eyes to see not parallel rows as it actually is but evidencing a few slopped squares especially at the ends or sides of the rows. Here is part of the code used to make this visualization:
 
 ```javascript=
 function draw() {
@@ -20,27 +48,74 @@ function draw() {
   }
 }
 ```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+
+**To interact with the ilussion please move the mouse on the X-axis to visualize some changes making the illusion more profound or mild according to the movement:**
 
 <div id="cafeWall"> </div>
 
-The following illusion is called **Café Wall**, it consists of simple elements as it is some black and white squares displayed inside parallel rows tricking our eyes to see not parallel rows as it actually is but evidencing a few slopped squares especially at the ends or sides of the rows. Here is part of the code used to make this visualization:
+### Mobius Strip
 
-```javascript=
-function draw() {
-  groutWidth = 139 / 25;
-  background('#444444*2');
-  numRows = ceil(1000 / (sqWidth)) + 1;
-  for (let i = 0; i < numRows; i = i + 1) {
-    line(0, i * sqWidth, 480, i * sqWidth);
-    drawRow(i);
-  }
-}
-```
+Next it is presented what is called a Mobius Strip,  one of the simplest optical illusions. It's also one of the most mystifying. What results is a simple strip that only has one edge and one surface. There is no discernible "front" or "back" side.
+
+
+<div id="mobiusStrip"> </div>
+
+### Penrose Triangle
+
+Last in this category is that is called a Penrose Triangle. Part of the paradox illusion because are generated by objects that are paradoxical or impossible in "real life" or three dimensions, but look oddly convincing and perplexing in two dimensional drawings. Such illusions are often dependent on a cognitive misunderstanding that adjacent edges must join.
+
+**Here we have a 3D example, plese feel free to play around moving the triangle to achieve the ilusion and undersatnd how is done.**
+
 
 <div id="penroseTriangle"> </div>
-<div id="circleMovements"> </div>
+
+## **Size perception**
+
+Into another type of illusion we hace the ones that trick our brains into thinking that atrbittues like size acording to perspective can be concieve like different.
+
+Here are listed some of the most common illusions:
+
+###  Muller Lyer
+
+Here are presented two lines with two colored segments green and yellow. On the right side there are some moving marks that turn the lines into styled arrows changing the perception of size.
+
 <div id="mullerLyer"> </div>
+
+
+### Ebbinghaus Illusion
+
+Is an optical illusion of relative size perception. Two circles of identical size are placed near to each other, and one is surrounded by large circles while the other is surrounded by small circles
+
+C*8lick over the canvas to hide the blue circles and see that the red circles are the same size**
+<div id="circleSize"> </div>
+
+### Ponzo Illusion
+
+Lastly there is another simple illusion but a tricky one, this one is calle Ponzo illusion designed by the italian Marion Ponzo he suggested that the human mind judges an object's size based on its background. He showed this by drawing two identical lines across a pair of converging lines, similar to railway tracks. The upper line looks longer because we interpret the converging sides according to linear perspective as parallel lines receding into the distance.
+
+This illusion is also part of the geometric illusion family. **To check the size of the yellow lines please move the mouse to get the lines closer**
+<div id="lines"> </div>
+
+## **Motion Perception**
+
+### Stepping feet
+
+Two "buses," one blue and one yellow, moving horizontally across a "street" consisting of black and white stripes. Although both of the buses move at a constant speed, their perceived speed varies dramatically.
+
+
+**To reveal that they are moving at the same speed head to head please click on the canvas and hold it to clear the black and white bars.**
+<div id="movingCars"> </div>
+
+### Breathing Square
+
+
+This illusion is one of several effects in which a rigid object is shown moving behind small apertures. The object appears to change size or shape as it moves. In this case the apertures become progressively narrower and wider as a square rotates behind them, and the square appears to expand and contract rhythmically
+
+**Click on the canvas to hide the yellow square and reveal the true movement of the green square**
+<div id="movingSquare"> </div>
+
+
+
+
 
 

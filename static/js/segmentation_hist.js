@@ -2,6 +2,13 @@
 var constraints= [0, 255, 0, 255, 0, 255, 0, 255];
 var old_constraints= [0, 255, 0, 255, 0, 255, 0, 255];
 
+var sliderR;
+var sliderG;
+var sliderB;
+var windowR;
+var windowG;
+var windowB;
+
 function arrayEquals(a, b) {
   return Array.isArray(a) &&
     Array.isArray(b) &&
@@ -93,31 +100,39 @@ function maxPixelValue(hist){
 
 function setup() {
 
-  createCanvas(2*img.width, 2* img.height);
+  c = createCanvas(2*img.width, 2* img.height);
   background(255);
   
   sliderR = createSlider(0, 255, 125);
-  sliderR.position(2.1*img.width, 6.73*img.height);
+  
   sliderR.style('width', '300px');
-  sliderR.style('background', '#43e5f7');
   sliderG = createSlider(0, 255, 125);
-  sliderG.position(2.1*img.width, 6.83*img.height);
+
   sliderG.style('width', '300px');
   sliderB = createSlider(0, 255, 125);
-  sliderB.position(2.1*img.width, 6.93*img.height);
+  
   sliderB.style('width', '300px');
   
   textBoxR = createInput('');
-  textBoxR.position(2.1*img.width-70, 6.73*img.height)
+  
   textBoxR.size(50);
   
   textBoxG = createInput('');
-  textBoxG.position(2.1*img.width-70, 6.83*img.height)
+  
   textBoxG.size(50);
   
   textBoxB = createInput('');
-  textBoxB.position(2.1*img.width-70, 6.93*img.height)
+  
   textBoxB.size(50);
+  sliderG.position(10, 200);
+
+  sliderR.position(1.2*c.position().x,c.position().y + img.height + 3/6*img.height + 30);
+  sliderG.position(1.2*c.position().x,c.position().y + img.height + 3/6*img.height + 80);
+  sliderB.position(1.2*c.position().x,c.position().y + img.height + 3/6*img.height + 130);
+
+  textBoxR.position(c.position().x,c.position().y + img.height + 3/6*img.height + 30);
+  textBoxG.position(c.position().x,c.position().y + img.height + 3/6*img.height + 80);
+  textBoxB.position(c.position().x,c.position().y + img.height + 3/6*img.height + 130);
 
   image(img, 0, 0);
   
@@ -173,12 +188,12 @@ function draw() {
 
   fill(0);
   textSize(10);
-  text('Slider y tamano de la segmentacion del histograma \ndel color Rojo: ', 0, 1.535 *h_img.height);
+  text1 = text('Slider y tamano de la segmentacion del histograma \ndel color Rojo: ', 0, 1.535 *h_img.height);
   fill(0);
   textSize(10);
-  text('Slider y tamano de la segmentacion del histograma \ndel color Verde: ', 0, 1.635 *h_img.height);
+  text2 = text('Slider y tamano de la segmentacion del histograma \ndel color Verde: ', 0, 1.635 *h_img.height);
   fill(0);
   textSize(10);
-  text('Slider y tamano de la segmentacion del histograma \ndel color Azul: ', 0, 1.735 *h_img.height);
+  text3 = text('Slider y tamano de la segmentacion del histograma \ndel color Azul: ', 0, 1.735 *h_img.height);
 
 }

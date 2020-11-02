@@ -22,22 +22,6 @@ It is the process of dividing an image into different regions based on the chara
 ![](https://es.mathworks.com/discovery/image-segmentation/_jcr_content/mainParsys3/discoverysubsection/mainParsys3/image_629538353.adapt.480.high.jpg/1588786618532.jpg)
 
 
-### Sana Twice Example 
-
-In this interactive example of segmentation using several histograms, on per color channel in RGB colorMode, using sliders you can modify the window range to segment in th histograms, and placing a number between 0 and 255 in the text boxes you will take the control of the size of the windows use it in the segmentation.
-
-
-<div class="row">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" type="text/javascript"></script>
-	<div class="centered_div" style="padding-top: 7px" id="canvasI">
-		<script src="/js/segmentation_hist.js" type="text/javascript"></script>   
-	</div>
-</div>
-
-
-
-feel free to test several windows and ranges, for example: Red Channel in 60, Green Channel in 180 and Blue Channel in 20 you will see an alien 사나.
-
 
 ## How to do it?
 
@@ -63,23 +47,34 @@ with the following code you will iterate it and take control over every channel:
 
 and updating the pixels in the image you can segment it for every channel.
 
-<style>
 
-.row {
-    display: flex;
-}
+### Experiments
 
-.centered_div {
-    margin:auto
-}
 
-#dropdown {
-    text-align: center;
-}
+As an experiment was took a sampling with a window of 20 values/bins in the highest values of all histograms.
 
-#source_img {
-    width:319px;
-    height: 359px; 
-}
+![](https://i.imgur.com/9ArFcvp.png)
 
-</style>
+The result is not very accurate, but you can see that you can see the pixels with high brightness, also was tried the same experiment with a higher number of bins/window (50), and the result was the following:
+
+![](https://i.imgur.com/Ozeb8kq.png)
+
+As you can see with a higher example (1/5 of the real histogram), you can see more accurately the most important of the photo, the person, not the background.
+
+And with less than a half of the whole histogram you can see a really accurately picture of the person. As an advantage we can use this to detect a face and fenotype from pictures with a sampling of an image histogram. 
+
+![](https://i.imgur.com/zwaSUck.png)
+
+### Sana Twice example 
+
+In this interactive example of segmentation using several histograms, on per color channel in RGB colorMode, using sliders you can modify the window range to segment in th histograms, and placing a number between 0 and 255 in the text boxes you will take the control of the size of the windows use it in the segmentation.
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" type="text/javascript"></script>
+<script src="/js/segmentation_hist.js" type="text/javascript"></script>   
+
+
+
+
+feel free to test several windows and ranges, for example: Red Channel in 60, Green Channel in 180 and Blue Channel in 20 you will see an alien 사나.
